@@ -17,9 +17,9 @@ def generate_primes():
     primes = [n for n in range(2, limit) if is_prime(n)]
     return jsonify(primes)
 
-@app.route('/', methods=['GET'])
+@app.route('/?', methods=['GET'])
 def welcome():
     return "Hello World! Welcome in prime number generator app!"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5001)
